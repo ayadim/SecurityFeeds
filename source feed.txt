@@ -1,0 +1,4 @@
+		//https://packetstormsecurity.com/search/files/page1/?q=ayadi
+		//https://rss.packetstormsecurity.com/search/files/?q="+exploit+"&s=files		
+		//http://sec.jetlib.com/search.php?media=rss&rss_query=Clipbucket&rss_query_match=or&rss_query_channel=-1&rss_order=date&rss_query_res_per_page=15&rss_query_current_page=0
+		
