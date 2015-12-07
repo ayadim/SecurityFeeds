@@ -18,8 +18,7 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.List;
 
-import java.net.URL;
-import java.net.URLConnection;
+
 import java.security.KeyManagementException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
@@ -96,7 +95,8 @@ public class Control {
 	}
 	
 	// --------- packetstormsecurity redirect the link to another page so we can get it with this function
-	private String getTheLinkFromRedirectUrl(String url){
+	private String getTheLinkFromRedirectUrl(String url)
+	{
 		String location="";
 		url = "https://packetstormsecurity.com/files/download/"+url.substring(38);//https://packetstormsecurity.com/files/  *start here*   134214/dsa-3392-1.txt
 		
@@ -116,7 +116,8 @@ public class Control {
 	}
 	
 	
-	public String getContentFromTxt(String myUrl){
+	public String getContentFromTxt(String myUrl)
+	{
 		// ------------- Get the content
 		myUrl = getTheLinkFromRedirectUrl(myUrl);
 		BufferedReader in=null;
@@ -143,7 +144,8 @@ public class Control {
 	}
 	
 	// check for version 
-	public String getLastestVersion(){
+	public String getLastestVersion()
+	{
 	  Feed myFeed = getFeedThatContaintMessages("https://gist.githubusercontent.com/ayadim/5fbe4ae66f7389b6e037/raw/securityFeeds.xml");//get version
 		if(myFeed.getMessages().size()==0){
 			return Control.version;
@@ -151,7 +153,8 @@ public class Control {
 	      return (myFeed.getMessages().get(0).getLastUpdate());
 	}
 	
-	public static void openLinkInBrowser(String link){
+	public static void openLinkInBrowser(String link)
+	{
 		try {
 			URI url = new URI(link);
 			if (Desktop.isDesktopSupported()) {
